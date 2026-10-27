@@ -7,7 +7,7 @@ into a formatted **Excel** file.
 2. Enter the PDF password (Safaricom sends it by SMS).
 3. Download `<statement>_transactions.xlsx`.
 
-## Run it: > `.venv\Scripts\python.exe app.py → http://127.0.0.1:5000`
+
 How it works
 1. Upload + password — PyMuPDF opens the PDF from memory; if needs_pass, the typed password is authenticated. Wrong/missing password gives a clear flash message.
 2. Parsing — detects the statement table, maps header cells to canonical fields (receipt_no, completion_time, details, status, paid_in, withdrawn, balance, plus transaction_cost/balance_after when present), and keeps only rows with a parseable date. Columns the statement lacks are dropped.
